@@ -12,7 +12,7 @@ $sql=$deletedata->delete($rid);
 if($sql)
 {
 // Message for successfull insertion
-echo "<script>alert('Record deleted successfully');</script>";
+echo "<script>alert('deleted successfully');</script>";
 echo "<script>window.location.href='index.php'</script>";
 }
     }
@@ -30,7 +30,6 @@ echo "<script>window.location.href='index.php'</script>";
         
     </style>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 </head>
@@ -68,7 +67,6 @@ echo "<script>window.location.href='index.php'</script>";
     <td><?php echo htmlentities($row['EmailId']);?></td>
     <td><?php echo htmlentities($row['ContactNumber']);?></td>
     <td><?php echo htmlentities($row['Address']);?></td>
-    <td><?php echo htmlentities($row['PostingDate']);?></td>
  <td><a href="update.php?id=<?php echo htmlentities($row['id']);?>"><button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></a></td>
  <td><a href="index.php?del=<?php echo htmlentities($row['id']);?>"><button class="btn btn-danger btn-xs" onClick="return confirm('Do you really want to delete');"><span class="glyphicon glyphicon-trash"></span></button></a></td>
     </tr>
